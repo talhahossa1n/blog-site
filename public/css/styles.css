@@ -24,7 +24,9 @@ form .btn {
   background-color: #1abc9c !important;
   border: none;
 }
-
+p a {
+  text-decoration: none;
+}
 .footer-padding {
   padding-bottom: 60px;
 }
