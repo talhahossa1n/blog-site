@@ -2,5 +2,9 @@
 <h1><%= title %></h1>
 <p><%= content %></p>
 
+<form action="/delete" method="POST">
+    <input type="hidden" name="postId" value="<%= postId %>" />
+    <button type="submit" class="dlt-btn btn">Delete</button>
+</form>
 
 <%- include('partials/footer'); -%>
