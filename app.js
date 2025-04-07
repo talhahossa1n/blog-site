@@ -18,13 +18,17 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
 aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
 
 const app = express();
-
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/blogDB";
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/blogDB");
+mongoose.connect(mongoURI).then(() => {
+  console.log("Connected to MongoDB successfully");
+}).catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
 
 const postSchema = {
   title: String,
