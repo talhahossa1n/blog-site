@@ -4,11 +4,14 @@ A simple blog website created with Node.js, Express, and EJS that allows users t
 
 ## Features
 
-- **Home Page:** Displays an introduction and a list of blog posts. Each post shows a preview of its content with a "Read More" link if the content is lengthy.
+- **Home Page:** Displays an introduction and a list of blog posts. Each post now always has a link to its dedicated page. For posts with content longer than 100 characters, a preview is shown with a "Read More" link; for shorter posts the full text is shown with an "Open" link.
+- **Individual Post Page:**  
+  - Opens the full post content regardless of its length.
+  - Includes a delete button that allows the post to be removed from the database.
 - **Compose Page:** Users can create a new blog post by providing a title and content.
-- **Individual Post Page:** Shows full content of a selected blog post.
 - **About & Contact Pages:** Static pages providing information about the blog and ways to get in touch.
 - **Responsive Design:** Built using Bootstrap for responsive layouts and modern UI components.
+
 
 ## Technologies Used
 
@@ -65,6 +68,8 @@ The server will start on port `3000`. Open your browser and visit [http://localh
 - **Home Page:** Displays introductory content and blog posts. Click on "Read More" to view a post in full.
 - **Compose Page:** Navigate to `/compose` to write a new blog post.
 - **Static Pages:** Visit `/about` and `/contact` for additional information.
+- **Viewing Posts:** Navigate to the home page to see a list of posts. Click the "Read More" link for lengthy posts or "Open" for shorter ones to view the full post. 
+- **Deleting a Post:** On the individual post page, click the **Delete** button to remove the post from the database. After deletion, you will be redirected back to the home page.
 
 ## Future Enhancements
 
